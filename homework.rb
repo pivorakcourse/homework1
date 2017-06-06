@@ -1,4 +1,4 @@
-VARIANT = 0
+VARIANT = 9
 
 def generate
   # put your solution here (delete the line below)
