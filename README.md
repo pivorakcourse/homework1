@@ -35,3 +35,6 @@ with your variant number;
 2) change the `generate` method in `homework.rb` file, so it will return
 a random number according to your variant pattern. Before you commit the
 solution, make sure the tests are passed.
+
+
+Slides for this lecture: http://vova.github.io/course101/
