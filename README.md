@@ -27,6 +27,11 @@ Please pick up the pattern according to your variant:
 20 "11-1CDVB-12345-ABCD11"
 ```
 
-You should change the `generate` method in homework.rb file, so it will return
+Your task is:
+
+1) change the constant `VARIANT` in the first line of `homework.rb` file
+with your variant number;
+
+2) change the `generate` method in `homework.rb` file, so it will return
 a random number according to your variant pattern. Before you commit the
 solution, make sure the tests are passed.
