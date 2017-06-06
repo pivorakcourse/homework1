@@ -1,6 +1,7 @@
-VARIANT = 0
+VARIANT = 1
 
-def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+def generate 
+  i, j, k = rand(1000...10000), rand(1000...10000), rand(1000...10000)
+  
+   "#{i}" + "-" + "#{j}" + "-" + "#{k}"
 end
