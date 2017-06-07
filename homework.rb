@@ -1,6 +1,20 @@
-VARIANT = 0
+VARIANT = 5
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+
+  # fastest finishing test
+  result = ''
+  2.times { result += rand(65..90).chr}
+  result += '-'
+  result += rand(1000000..9999999).to_s
+  result += '-'
+  3.times { result += rand(65..90).chr}
+  result
+
+  #solution in one line but slower in 100 times
+  # ('AA'..'ZZ').to_a.sample + '-' + rand(1000000..9999999).to_s + '-' + ('AAA'..'ZZZ').to_a.sample
+  
 end
+
+
+puts generate
