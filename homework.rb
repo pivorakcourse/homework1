@@ -1,6 +1,5 @@
-VARIANT = 0
+VARIANT = 6
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  rand(10..99).to_s + '-' + rand(1000000..9999999).to_s + '-' + [*"A".."Z"].sample(3).join
 end
