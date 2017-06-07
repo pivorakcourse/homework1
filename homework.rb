@@ -1,6 +1,9 @@
-VARIANT = 0
+VARIANT = 13
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  string = ('A'..'Z').to_a.sample(6).join('')
+  first_numbers = (0..9).to_a.sample(6).join('')
+  second_numbers = (0..9).to_a.sample(4).join('')
+
+  string + '-' + first_numbers + '-' + second_numbers
 end
