@@ -15,6 +15,3 @@ def generate
   # ('AA'..'ZZ').to_a.sample + '-' + rand(1000000..9999999).to_s + '-' + ('AAA'..'ZZZ').to_a.sample
   
 end
-
-
-puts generate
