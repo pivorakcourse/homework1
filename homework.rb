@@ -1,12 +1,15 @@
 VARIANT = 7
+LETTERS_RANGE = 'A'..'Z'
+NUMBERS_RAMGE = 1000000..9999999
+
+def letters
+  LETTERS_RANGE.to_a.sample(3).join
+end
+
+def numbers
+  rand(NUMBERS_RAMGE).to_s
+end
 
 def generate
-  # put your solution here (delete the line below)
-  letters = []
-  2.times do |letter|
-    letter = ('A'..'Z').to_a.sample(3).join
-    letters << letter
-  end
-  numbers = rand(1000000..9999999).to_s
-  letters[0] + '-' + numbers + '-' + letters[1]
+  "#{letters}-#{numbers}-#{letters}"
 end
