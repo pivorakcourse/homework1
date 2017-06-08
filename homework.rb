@@ -4,7 +4,7 @@ TWO_DIGIT_NUMBER = 10..99
 THREE_DIGIT_NUMBER = 100..999
 
 def alphabet(number_of_letters)
-  letters = ('a'..'z').to_a.sample(number_of_letters).join
+  ('a'..'z').to_a.sample(number_of_letters).join
 end
 
 def generate
