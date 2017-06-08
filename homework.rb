@@ -4,16 +4,16 @@ NUM_PART1_LENGTH = 6
 NUM_PART2_LENGTH = 2
 
 def random_num_str(str_length)
-  str = ''
-  str_length.times { str += rand(0...10).to_s }
-  str
+  arr = Array.new
+  str_length.times { arr << rand(0...10) }
+  arr.join
 end
 
 def generate
   # pattern: "ABCDEF-123456-98"
   letters = ''
   LETTERS_LENGTH.times { letters += ('A'..'Z').to_a.sample }
-  num1 = random_num_str(NUM_PART1_LENGTH)
-  num2 = random_num_str(NUM_PART2_LENGTH)
-  "#{letters}-#{num1}-#{num2}"
+  num_part1 = random_num_str(NUM_PART1_LENGTH)
+  num_part2 = random_num_str(NUM_PART2_LENGTH)
+  "#{letters}-#{num_part1}-#{num_part2}"
 end
