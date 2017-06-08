@@ -1,6 +1,19 @@
-VARIANT = 0
+VARIANT = 16
+ALPHABET = ("A".."Z").to_a
 
-def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+def rand_letters_block
+	letters_block = Array.new
+	4.times do letters_block << ALPHABET[rand(ALPHABET.length)]
+	end
+	return letters_block.join
 end
+
+def rand_numbers_block
+	numbers_block = Array.new
+	5.times do numbers_block << rand(0..9)
+	end
+	return numbers_block.join
+end
+
+
+puts "#{rand_letters_block}-#{rand_letters_block}-#{rand_numbers_block}-#{rand_numbers_block}"
