@@ -1,15 +1,19 @@
 VARIANT = 12
-NUM_OF_LETTERS = 6
-NUM_OF_DIGITS = 8
-DIGITS_SPLIT_PLACE = 6
+LETTERS_LENGTH = 6
+NUM_PART1_LENGTH = 6
+NUM_PART2_LENGTH = 2
+
+def random_num_str(str_length)
+  str = ''
+  str_length.times { str += rand(0...10).to_s }
+  str
+end
 
 def generate
   # pattern: "ABCDEF-123456-98"
-  # chunk of additional code to add (hopefully) more functionality:
-  temp_str = ''
-  NUM_OF_DIGITS.times { temp_str += rand(0...10).to_s }
-  # the main code:
-  ('a'..'z').to_a.sample(NUM_OF_LETTERS).join.upcase + '-' +
-                temp_str.slice(0...DIGITS_SPLIT_PLACE) + '-' +
-                  temp_str.slice(DIGITS_SPLIT_PLACE...NUM_OF_DIGITS)
+  letters = ''
+  LETTERS_LENGTH.times { letters += ('A'..'Z').to_a.sample }
+  num1 = random_num_str(NUM_PART1_LENGTH)
+  num2 = random_num_str(NUM_PART2_LENGTH)
+  "#{letters}-#{num1}-#{num2}"
 end
