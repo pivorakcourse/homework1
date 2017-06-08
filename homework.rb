@@ -1,6 +1,7 @@
-VARIANT = 0
-
+VARIANT = 1
+# "1234-5678-1234"
 def generate
   # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  a, b, c = rand(1000...9999), rand(1000...9999), rand(1000...9999)
+  "#{a}" + "-" + "#{b}" + "-" + "#{c}"
 end
