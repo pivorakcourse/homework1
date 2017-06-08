@@ -1,10 +1,17 @@
 VARIANT = 9
 
-def generate
-  random_numbers = Array.new(3) { rand(1...9) }.join('')
-
+def random_things(args)
   letters_array = ('A'..'Z').to_a.flatten
-  random_letters = Array.new(3) { letters_array[rand(letters_array.length)] }.join('')
+  
+  if args == :numbers
+    Array.new(3) { rand(1...9) }.join('')
+  elsif args == :letters
+    Array.new(3) { letters_array[rand(letters_array.length)] }.join('')
+  else
+    raise 'Unknown things!'
+  end
+end
 
-  "#{random_numbers}" + "-" + "#{random_letters}" + "-" + "#{random_letters}" + "-" + "#{random_numbers}"
+def generate
+  "#{random_things(:numbers)}-#{random_things(:letters)}-#{random_things(:letters)}-#{random_things(:numbers)}"
 end
