@@ -1,5 +1,6 @@
 VARIANT = 17
-
+  A_ENCODING = 65
+  TOTAL_LETTERS_ALPHABET = 26
   def rand_int
     #generate random number
     rand(10).to_s
@@ -7,8 +8,6 @@ VARIANT = 17
 
   def rand_char
     #generating random letter
-    A_ENCODING = 65
-    TOTAL_LETTERS_ALPHABET = 26
     (A_ENCODING + rand(TOTAL_LETTERS_ALPHABET)).chr.to_s
   end
 
