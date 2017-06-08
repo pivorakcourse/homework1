@@ -1,9 +1,16 @@
 VARIANT = 13
 
 def generate
-  string = ('A'..'Z').to_a.sample(6).join('')
-  first_numbers = (0..9).to_a.sample(6).join('')
-  second_numbers = (0..9).to_a.sample(4).join('')
+  "#{part_of_string(6)}-#{part_of_string(6, 'numeric')}-#{part_of_string(4, 'numeric')}"
+end
 
-  string + '-' + first_numbers + '-' + second_numbers
+def part_of_string(size, type='string')
+  range = (type == 'string') ? ('A'..'Z') : (0..9)
+  part  = ''
+
+  size.times do
+    part += range.to_a.sample().to_s
+  end
+
+  part
 end
