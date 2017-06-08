@@ -15,5 +15,6 @@ def rand_numbers_block
 	return numbers_block.join
 end
 
-
-puts "#{rand_letters_block}-#{rand_letters_block}-#{rand_numbers_block}-#{rand_numbers_block}"
+def generate
+rand_letters_block + '-' + rand_letters_block + '-' + rand_numbers_block + '-' + rand_numbers_block
+end
