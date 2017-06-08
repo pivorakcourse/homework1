@@ -2,13 +2,18 @@ VARIANT = 19
 ONE_DIGIT_NUMBER = 1..9
 TWO_DIGIT_NUMBER = 10..99
 THREE_DIGIT_NUMBER = 100..999
+
+def alphabet(number_of_letters)
+  letters = ('a'..'z').to_a.sample(number_of_letters).join
+end
+
 def generate
   [
     rand(TWO_DIGIT_NUMBER),
-    ('a'..'z').to_a.sample(2).join,
+    alphabet(2),
     rand(ONE_DIGIT_NUMBER),
-    ('a'..'z').to_a.sample(4).join,
+    alphabet(4),
     rand(THREE_DIGIT_NUMBER),
-    ('a'..'z').to_a.sample(2).join
+    alphabet(2)
   ].join('-').upcase
 end
