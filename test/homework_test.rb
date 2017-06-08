@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require './homework'
+require '../homework'
 
 class HomeworkTest < Minitest::Test
 
