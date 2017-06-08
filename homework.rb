@@ -12,5 +12,3 @@ def generate
     ('a'..'z').to_a.sample(2).join
   ].join('-').upcase
 end
-
-p generate
