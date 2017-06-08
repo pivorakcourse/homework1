@@ -1,6 +1,12 @@
-VARIANT = 0
+VARIANT = 8
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  letters = *("A".."Z")
+
+  letter = -> { letters.sample(3).join }
+  number = -> { rand(100..999).to_s }
+
+  [letter.call, number.call, letter.call, number.call].join("-")
 end
+
+
