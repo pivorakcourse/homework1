@@ -1,6 +1,7 @@
-VARIANT = 0
+VARIANT = 15
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  form = rand(100000...999999).to_s + '-' + ('AAAA'...'ZZZZ').to_a.sample + '-' + ('AAAA'...'ZZZZ').to_a.sample
+  print "#{form}\n"
+  form
 end
