@@ -1,6 +1,6 @@
-VARIANT = 0
+VARIANT = 11
 
 def generate
   # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  (1..3).map { ('A'..'Z').to_a.sample(3).join }.join('-') + '-' + (0..9).to_a.sample(3).join
 end
