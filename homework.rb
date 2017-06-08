@@ -1,6 +1,9 @@
-VARIANT = 0
+VARIANT = 1
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  ch  = lambda { |range| (0...range).map { ('A'..'Z').to_a[rand(26)] }.join }
+  num = lambda { |range| (0...range).map { rand(9) }.join }
+  result = "#{num.call(4)}-#{num.call(4)}-#{num.call(4)}"
 end
+
+generate
