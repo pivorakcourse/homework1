@@ -9,12 +9,12 @@ end
 
 def generate
 
-  number  = -> { random_symbol(NUMS_RANGE) }
+  number = -> { random_symbol(NUMS_RANGE) }
   char = -> { random_symbol(CHAR_RANGE) }
 
-  first  = number.call + number.call + number.call
+  first = number.call + number.call + number.call
   second = char.call + char.call + char.call
-  third  = number.call + number.call + number.call
+  third = number.call + number.call + number.call
   fourth = char.call + char.call + char.call
 
   "#{first}-#{second}-#{third}-#{fourth}"
