@@ -1,9 +1,8 @@
 VARIANT = 5
 
-LETTER_START_POINT = 65
-LETTER_END_POINT = 90
-UPCASE_LETTERS_RANGE = 65..90
+
 DIGITS_RANGE = 0..9
+LETTERS_RANGE = 'A'..'Z'
 
 FIRST_PART_LENGTH = 2
 SECOND_PART_LENGTH = 7
@@ -14,15 +13,13 @@ THIRD_PART_LENGTH = 3
 
 
 def generate
-  first_part = ''
-  FIRST_PART_LENGTH.times { first_part += rand(UPCASE_LETTERS_RANGE).chr}
-  
-  second_part = ''
-  SECOND_PART_LENGTH.times { second_part += rand(DIGITS_RANGE).to_s}
-  
-  third_part = ''
-  THIRD_PART_LENGTH.times { third_part += rand(UPCASE_LETTERS_RANGE).chr}
-  result = "#{first_part}-#{second_part}-#{third_part}"
+
+
+  first_part = ->()  { (DIGITS_RANGE).to_a.sample(FIRST_PART_LENGTH).join }
+  second_part = ->() { (LETTERS_RANGE).to_a.sample(SECOND_PART_LENGTH).join }
+  third_part = ->() { (DIGITS_RANGE).to_a.sample(THIRD_PART_LENGTH).join }
+
+  result = "#{first_part.call}-#{second_part.call}-#{third_part.call}"
+
 end
 
-p generate
