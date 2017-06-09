@@ -9,7 +9,7 @@ end
 
 def generate
 
-	number  = -> { random_symbol(NUMS_RANGE) }
+  number  = -> { random_symbol(NUMS_RANGE) }
   char = -> { random_symbol(CHAR_RANGE) }
 
   first  = number.call + number.call + number.call
