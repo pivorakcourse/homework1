@@ -6,9 +6,9 @@ def random_4_numbers
 end
 
 def generate 
-  first_random_four_numbers = random_12_numbers
-  second_random_four_numbers = random_12_numbers
-  third_random_four_numbers = random_12_numbers
+  first_random_four_numbers = random_4_numbers
+  second_random_four_numbers = random_4_numbers
+  third_random_four_numbers = random_4_numbers
 
   "#{first_random_four_numbers}-#{second_random_four_numbers}-#{third_random_four_numbers}"
 end
