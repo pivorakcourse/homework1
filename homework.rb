@@ -1,6 +1,9 @@
-VARIANT = 0
+VARIANT = 6
 
 def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+  first_part = rand(10..99).to_s
+  second_part = rand(1000000..9999999).to_s
+  third_part = ("A".."Z").to_a.sample(3).join
+
+  "#{first_part}-#{second_part}-#{third_part}"
 end
