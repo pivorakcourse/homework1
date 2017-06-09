@@ -1,20 +1,21 @@
-VARIANT = 10
-# 10 "123-ABC-987-ABC"
+VARIANT = 10 # 10 "123-ABC-987-ABC"
+
+NUMS_RANGE = 1..9
+CHAR_RANGE = 'A'..'Z'
+
+def random_symbol(range)
+  range.to_a.sample(1).join
+end
 
 def generate
-  # letter = ("A".."Z").to_a
 
-  # letters = -> { letter.sample(3).join }
-  # numbers = -> { rand(100..999).to_s }
+	number  = -> { random_symbol(NUMS_RANGE) }
+  char = -> { random_symbol(CHAR_RANGE) }
 
-  # [numbers.call, letters.call, numbers.call, letters.call].join("-")
+  first  = number.call + number.call + number.call
+  second = char.call + char.call + char.call
+  third  = number.call + number.call + number.call
+  fourth = char.call + char.call + char.call
 
-
-
-  letter = ("A".."Z").to_a
-
-  letters = lambda { |x| letter.sample(x).join }
-  number = lambda { rand(1..9).to_s }
-
-  number.call+number.call+number.call+"-"+letters.call(3)+"-"+number.call+number.call+number.call+"-"+letters.call(3)
+  "#{first}-#{second}-#{third}-#{fourth}"
 end
