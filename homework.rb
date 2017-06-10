@@ -1,6 +1,9 @@
-VARIANT = 0
+VARIANT = 1
 
-def generate
-  # put your solution here (delete the line below)
-  rand(1000000).to_s + '-' + rand(1000000).to_s
+def random_4_numbers 
+  rand(1000..10000)
+end
+
+def generate 
+  "#{random_4_numbers}-#{random_4_numbers}-#{random_4_numbers}"
 end
