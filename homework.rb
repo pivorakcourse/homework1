@@ -5,5 +5,5 @@ def random_4_numbers
 end
 
 def generate 
-  "#{random_4_numbers }-#{random_4_numbers }-#{random_4_numbers }"
+  "#{random_4_numbers}-#{random_4_numbers}-#{random_4_numbers}"
 end
